@@ -11,12 +11,12 @@
 //             __/ |
 //            |___/
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
-  src_folders: ['test','nightwatch'],
+  src_folders: ["test", "example"],
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
   page_objects_path: [],
@@ -29,44 +29,44 @@ module.exports = {
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html
   plugins: [],
-  
+
   // See https://nightwatchjs.org/guide/concepts/test-globals.html
-  globals_path: '',
-  
+  globals_path: "",
+
   selenium: {
     host: "selenium-chrome",
     port: 4444,
 
     webdriver: {
-      start_process: false
-    }
+      start_process: false,
+    },
   },
 
   test_workers: {
-    enabled: true
+    enabled: true,
   },
 
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'http://www.google.com',
+      launch_url: "http://www.google.com",
 
       screenshots: {
         enabled: false,
-        path: 'screens',
-        on_failure: true
+        path: "screens",
+        on_failure: true,
       },
 
       webdriver: {
-        port: 4444
+        port: 4444,
       },
 
       desiredCapabilities: {
-        browserName: 'chrome',
+        browserName: "chrome",
         chromeOptions: {
           // args: ["headless", "no-sandbox", "disable-gpu"],
-        }
+        },
       },
     },
-  }
+  },
 };
